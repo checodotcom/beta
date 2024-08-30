@@ -1,0 +1,173 @@
+:root{
+    --color-primary: #fff7e7;
+    --color-secondary: #484848e4;
+    --color-accent: #395832;
+}
+
+html body{
+    max-height: 100%;
+}
+
+body{
+    background-color: var(--color-primary);
+    margin: 0;
+}
+
+header{
+    display: flex;    
+}
+
+h1{
+    color: var(--color-secondary);
+    font-size: 4em;
+    padding-left: 1em;
+}
+
+h2{
+    color:var(--color-secondary);
+}
+
+#hero {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+p{
+color: black;
+display: flex;
+justify-content: center;
+text-align: center;
+}
+
+a{
+    margin-left: 5px;
+}
+
+p a:link{
+    color:blue;
+    text-decoration: none;
+}
+
+p a:visited{
+    color:blue;
+    text-decoration: none;
+}
+
+p a:hover{
+    color: darkblue;
+    text-decoration: none;
+}
+
+p a:active{
+    color: red;
+    transform: scale(2);
+}
+
+#buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 45vh;
+    align-items: center;
+    gap: 2em;
+
+
+}
+
+.button-home{
+    background-color:var(--color-accent);
+    color: var(--color-primary);
+    padding: 1.5em 3em 1.5em 3em;
+    border-radius: 1em;
+    text-decoration: none;
+}
+
+.button-home:hover{
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    box-shadow: 0.5em 0.5em 0.5em;
+}
+
+hr {
+    margin: 2em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  height: 10vh;
+
+}
+
+.footer-element {
+position: relative;
+
+}
+
+
+
+@media (max-width: 768px){
+   /* body{
+   } */
+
+   h1{
+    font-size: 4em;
+    padding-top: 1em;
+   }
+   
+    #buttons{
+        margin: 3em;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        justify-content: center;
+        align-self: center;
+        gap: 1em;
+        height: 15vh;
+    }
+
+    #hero{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #hero > p {
+        font-size: 1em;
+        max-width: 50vw;
+        
+    }
+
+    p{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+    }
+
+    .button-home{
+        display: flex;
+        text-wrap: nowrap;
+        text-align: center;
+        font-size: 1em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    .hr {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+    }
+
+    hr {
+        size: 2em;
+        color: red;
+    }
+}
