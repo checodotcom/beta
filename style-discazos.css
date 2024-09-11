@@ -1,0 +1,206 @@
+:root{
+    --color-primary: #fff7e7;
+    --color-secondary: #484848e4;
+    --color-accent: #395832;
+}
+
+body {
+    background-color: var(--color-primary);
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+height: 20vh;
+background-color: var(--color-primary);
+margin-left: 10vw ;
+}
+
+h2 {
+    color: var(--color-secondary);
+    margin-left: 3em;
+}
+h3 {
+    color: var(--color-secondary);
+    font-size: 4em;
+}
+
+#content{
+    width: 100vw;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+p {
+    color: black;
+    margin: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+}
+
+
+.content {
+    display: flex;
+    margin: 0px;
+    max-width: 100%;
+}
+
+.entrada:nth-child(odd) {
+    justify-content: flex-start;
+}
+
+.entrada:nth-child(even) {
+    align-self: flex-end;
+}
+
+img {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5em;
+  max-width: 40vw;
+}
+
+.content-title {
+    font-style: italic;
+}
+
+
+
+footer {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    }
+
+h1 {
+    color: var(--color-secondary);
+    font-size: 4em;
+}
+
+.footer-item1, .footer-item2 .footer-item3 {
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+
+.button-home {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border-radius: 1em;
+    text-decoration: none;
+    white-space: nowrap; 
+}
+
+.button-home:hover {
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    box-shadow: 0.5em 0.5em 0.5em;
+}
+
+
+
+
+/* Display grande */
+@media (min-width: 769px){
+
+    html body{
+  padding: 0;
+  overflow-x: hidden;
+    }
+    
+
+    header{
+    justify-content: space-between;
+    display: flex;
+    }
+
+    .header-buttons{
+        max-width: 50%;
+    }
+
+    .button-home {
+        padding: 1em 2em; 
+    }
+
+   
+}
+
+
+/* Para mobil */
+@media (max-width: 768px) { 
+    header {
+        display: flex;
+        flex-direction: row;
+        height: 20vh;
+
+    }
+    body{
+        width: 100vw;
+    }
+
+
+.header-buttons{
+
+    gap: 1em; 
+    padding:1em;
+}
+
+
+    
+    img{
+        max-width: 65vw;
+
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    footer{
+        height: 30vh;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-item1, .footer-item3 {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 4em;
+        }
+
+
+        }
+        .footer-item2{
+            display: grid;
+            grid-template-columns: 1;
+            gap: 2em;
+            justify-content: space-around;
+        }
+
+        .button-home {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            border-radius: 1em;
+            padding: 1em 2em;
+            width: 20vw;
+            text-align: center;
+        }
+
+        .button-home:active {
+            background-color: var(--color-primary);
+            color: var(--color-accent);
+            box-shadow: 0.5em 0.5em 0.5em;
+        }
+
+    #content{
+        margin:0;
+    }
